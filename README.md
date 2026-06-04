@@ -1,14 +1,14 @@
 # Nothing Design Skill
 
-A design system skill for [Claude Code](https://claude.ai/code) inspired by Nothing's visual language. Monochrome, typographic, industrial.
+A design system skill adapted for Codex/OpenAI-style coding agents, inspired by Nothing's visual language. Monochrome, typographic, industrial.
 
-I kept describing the same design rules to Claude over and over — Swiss typography, OLED blacks, segmented progress bars, dot-matrix motifs. So I packaged it into a reusable skill.
+I kept describing the same design rules over and over — Swiss typography, OLED blacks, segmented progress bars, dot-matrix motifs. So I packaged it into a reusable skill.
 
 ![Preview](preview.gif)
 
 ## What you get
 
-Tell Claude `/nothing-design` or say "Nothing style" and it generates UI following these principles:
+Tell the agent to use "Nothing style" or apply the Nothing design system and it will generate UI following these principles:
 
 - Three-layer visual hierarchy (display, body, metadata — that's it)
 - Space Grotesk + Space Mono + Doto font stack
@@ -18,23 +18,20 @@ Tell Claude `/nothing-design` or say "Nothing style" and it generates UI followi
 
 ## Install
 
-Copy the `nothing-design` folder into your Claude Code skills directory:
-
-```sh
-git clone https://github.com/dominikmartn/nothing-design-skill.git
-cp -r nothing-design-skill/nothing-design ~/.claude/skills/
-```
-
-That's it. Next time you start Claude Code, the skill is available.
+Copy the `nothing-design` folder into your Codex skills/instructions directory or reuse `nothing-design/SKILL.md` as a project instruction file, depending on your Codex setup.
 
 ## What's inside
 
 | File | |
 |------|---|
-| `SKILL.md` | Design philosophy, craft rules, workflow |
-| `references/tokens.md` | Colors, fonts, spacing, motion tokens |
-| `references/components.md` | Buttons, cards, lists, tables, overlays |
-| `references/platform-mapping.md` | CSS, SwiftUI, React output mappings |
+| `nothing-design/SKILL.md` | Design philosophy, craft rules, workflow |
+| `nothing-design/references/tokens.md` | Colors, fonts, spacing, motion tokens |
+| `nothing-design/references/components.md` | Buttons, cards, lists, tables, overlays |
+| `nothing-design/references/platform-mapping.md` | CSS, SwiftUI, React output mappings |
+
+## Notes for Codex
+
+This repository was originally written for Claude Code. The skill frontmatter and instructions have been rewritten so the core prompt can be pasted into Codex-compatible instruction files without Claude-specific tool declarations or slash-command assumptions.
 
 ## License
 
